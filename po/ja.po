@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Comprehensive Rust 🦀\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-05-26 17:58+0900\n"
+"PO-Revision-Date: 2023-05-26 18:58+0900\n"
 "Last-Translator: Kenta Aratani <kentaaratani@coinez.jp>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
 "Language: ja\n"
@@ -905,11 +905,11 @@ msgstr "Asyncチャネル"
 
 #: src/SUMMARY.md:287
 msgid "Join"
-msgstr "結合"
+msgstr ""
 
 #: src/SUMMARY.md:288
 msgid "Select"
-msgstr "選択"
+msgstr ""
 
 #: src/SUMMARY.md:289
 msgid "Pitfalls"
@@ -1024,9 +1024,9 @@ msgid ""
 "[![GitHub contributors](https://img.shields.io/github/contributors/google/comprehensive-rust?"
 "style=flat-square)](https://github.com/google/comprehensive-rust/graphs/contributors)\n"
 "[![GitHub stars](https://img.shields.io/github/stars/google/comprehensive-rust?style=flat-square)]"
-"(https://github.com/google/comprehensive-rust/stargazers)"
-"[![GitHub contributors](https://img.shields.io/github/contributors/google/comprehensive-rust?"
-"style=flat-square)](https://github.com/google/comprehensive-rust/graphs/contributors)\n"
+"(https://github.com/google/comprehensive-rust/stargazers)[![GitHub contributors](https://img."
+"shields.io/github/contributors/google/comprehensive-rust?style=flat-square)](https://github.com/"
+"google/comprehensive-rust/graphs/contributors)\n"
 "[![GitHub stars](https://img.shields.io/github/stars/google/comprehensive-rust?style=flat-square)]"
 "(https://github.com/google/comprehensive-rust/stargazers)"
 msgstr ""
@@ -1038,9 +1038,9 @@ msgstr ""
 #: src/welcome.md:5
 msgid ""
 "[![GitHub stars](https://img.shields.io/github/stars/google/comprehensive-rust?style=flat-square)]"
-"(https://github.com/google/comprehensive-rust/stargazers)"
-"[![GitHub stars](https://img.shields.io/github/stars/google/comprehensive-rust?style=flat-square)]"
-"(https://github.com/google/comprehensive-rust/stargazers)"
+"(https://github.com/google/comprehensive-rust/stargazers)[![GitHub stars](https://img.shields.io/"
+"github/stars/google/comprehensive-rust?style=flat-square)](https://github.com/google/comprehensive-"
+"rust/stargazers)"
 msgstr ""
 
 #: src/welcome.md:7
