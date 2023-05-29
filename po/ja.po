@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Comprehensive Rust 🦀\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-05-29 16:40+0900\n"
+"PO-Revision-Date: 2023-05-29 21:31+0900\n"
 "Last-Translator: Kenta Aratani <kentaaratani@coinez.jp>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
 "Language: ja\n"
@@ -2091,7 +2091,7 @@ msgstr ""
 msgid ""
 "Let us jump into the simplest possible Rust program, a classic Hello World\n"
 "program:"
-msgstr ""
+msgstr "さっそく伝統的なHello Worldプログラムを確認していきましょう："
 
 #: src/hello-world.md:6
 msgid ""
@@ -2104,7 +2104,7 @@ msgstr ""
 
 #: src/hello-world.md:12
 msgid "What you see:"
-msgstr ""
+msgstr "プログラムの中身："
 
 #: src/hello-world.md:14
 msgid ""
@@ -2114,12 +2114,18 @@ msgid ""
 "* Rust has hygienic macros, `println!` is an example of this.\n"
 "* Rust strings are UTF-8 encoded and can contain any Unicode character."
 msgstr ""
+"* 関数は`fn`で導入されます\n"
+"* CやC++と同様に、ブロックは中括弧で囲まれます\n"
+"*`main`関数はプログラムのエントリーポイントです\n"
+"* Rustのマクロは衛生的であり、`println!`はその一例です\n"
+"* Rustの文字列はUTF-8エンコードされており、人のUnicode文字を含む事ができます"
 
 #: src/hello-world.md:22
 msgid ""
 "This slide tries to make the students comfortable with Rust code. They will see\n"
 "a ton of it over the next four days so we start small with something familiar."
 msgstr ""
+"次の４日間で受講者は多くのRustコードに触れる事になるため、まずは馴染みのあるものから始めます。"
 
 #: src/hello-world.md:27
 msgid ""
@@ -2136,6 +2142,17 @@ msgid ""
 "  the scope they are used in. Rust macros are actually only\n"
 "  [partially hygenic](https://veykril.github.io/tlborm/decl-macros/minutiae/hygiene.html)."
 msgstr ""
+"* Rustは、C/C++/Javaに似ています。Rustは命令型（関数型ではなく）であり、必須でない限り機能の再発明"
+"はしていません。\n"
+"\n"
+"* RustはUnicodeなどにも完全に対応しているモダンな言語です。\n"
+"\n"
+"* Rustで可変長引数を用いたい場合は、マクロを使用します(関数[オーバーロード](basic-syntax/functions-"
+"interlude.md)はありません)。\n"
+"\n"
+"* 「衛生的」なマクロとは、使用されるスコープから識別子を誤って捕捉しないマクロの事です。実際には、"
+"Rustのマクロは[部分的に衛生的](https://veykril.github.io/tlborm/decl-macros/minutiae/hygiene.html)"
+"です。"
 
 #: src/hello-world/small-example.md:1
 msgid "# Small Example"
@@ -2143,7 +2160,7 @@ msgstr ""
 
 #: src/hello-world/small-example.md:3
 msgid "Here is a small example program in Rust:"
-msgstr ""
+msgstr "これは、Rustでの小さなサンプルプログラムです："
 
 #: src/hello-world/small-example.md:5
 msgid ""
@@ -2170,6 +2187,8 @@ msgid ""
 "always end, but this is not yet proved. Edit the code and play with different\n"
 "inputs."
 msgstr ""
+"これはCollatz予想を実装したコードです：このループはいずれ終了すると言われていますが、まだ証明はされ"
+"ていません。コードを編集して異なる入力値で試してみてください。"
 
 #: src/hello-world/small-example.md:29
 msgid ""
@@ -2188,6 +2207,19 @@ msgid ""
 "  which has the rules of the formatting mini-language. It's important that the\n"
 "  students become familiar with searching in the standard library."
 msgstr ""
+"* 全ての変数が静的に型付けされている事を説明してください。`i32`を削除して型推論を試してみてくださ"
+"い。代わりに`i8`を使用して実行時に整数オーバーフローを引き起こしてみてください。\n"
+"\n"
+"* `let mut x` を`let x`に変更し、コンパイルエラーについて説明してください。\n"
+"\n"
+"* `print!`の引数がフォーマット文字列と一致しない場合、コンパイルエラーが発生する事を示してくださ"
+"い。\n"
+"\n"
+"* 単一の変数定義よりもより複雑な式を書きたい場合は、`{}`をプレースホルダとして使用する必要がある事"
+"を説明してください。\n"
+"\n"
+"* 標準ライブラリを紹介し、`std::fmt`の検索方法を説明してください。`std::fmt`には、フォーマットに関"
+"するルールが記述されているため、標準ライブラリの検索に慣れておく事が重要です。"
 
 #: src/why-rust.md:1
 msgid "# Why Rust?"
