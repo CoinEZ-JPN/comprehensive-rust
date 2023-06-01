@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Comprehensive Rust 🦀\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-06-01 20:33+0900\n"
+"PO-Revision-Date: 2023-06-01 23:46+0900\n"
 "Last-Translator: Kenta Aratani <kentaaratani@coinez.jp>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
 "Language: ja\n"
@@ -2476,11 +2476,11 @@ msgstr ""
 
 #: src/basic-syntax.md:1
 msgid "# Basic Syntax"
-msgstr ""
+msgstr "# 基本構文"
 
 #: src/basic-syntax.md:3
 msgid "Much of the Rust syntax will be familiar to you from C, C++ or Java:"
-msgstr ""
+msgstr "Rustの構文の多くは、C、C++、またはJavaと似ているため、馴染みやすいでしょう。"
 
 #: src/basic-syntax.md:5
 msgid ""
@@ -2490,6 +2490,10 @@ msgid ""
 "* Keywords like `if` and `while` work the same.\n"
 "* Variable assignment is done with `=`, comparison is done with `==`."
 msgstr ""
+"* ブロックとスコープは中括弧で囲まれます\n"
+"* 単一行コメントは`//`で始まり、複数行コメントは`/* … */`で囲まれます\n"
+"* `if`や`while`などのキーワードは同じように機能します\n"
+"* 変数への代入には`=`、比較には`==`が使われます"
 
 #: src/basic-syntax/scalar-types.md:1
 msgid "# Scalar Types"
