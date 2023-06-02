@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Comprehensive Rust 🦀\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-06-02 12:32+0900\n"
+"PO-Revision-Date: 2023-06-02 13:40+0900\n"
 "Last-Translator: Kenta Aratani <kentaaratani@coinez.jp>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
 "Language: ja\n"
@@ -2595,7 +2595,7 @@ msgstr ""
 
 #: src/basic-syntax/compound-types.md:1
 msgid "# Compound Types"
-msgstr ""
+msgstr "# 複合型"
 
 #: src/basic-syntax/compound-types.md:3
 msgid ""
@@ -2604,10 +2604,14 @@ msgid ""
 "| Arrays | `[T; N]`                      | `[20, 30, 40]`, `[0; 3]`          |\n"
 "| Tuples | `()`, `(T,)`, `(T1, T2)`, ... | `()`, `('x',)`, `('x', 1.2)`, ... |"
 msgstr ""
+"|        | 型                         | リテラル                          |\n"
+"|————|———————————————|—————————————————|\n"
+"| 配列 | `[T; N]`                      | `[20, 30, 40]`, `[0; 3]`          |\n"
+"| タプル | `()`, `(T,)`, `(T1, T2)`, … | `()`, `(‘x’,)`, `(‘x’, 1.2)`, … |"
 
 #: src/basic-syntax/compound-types.md:8
 msgid "Array assignment and access:"
-msgstr ""
+msgstr "配列へのアクセスと代入："
 
 #: src/basic-syntax/compound-types.md:10
 msgid ""
@@ -2622,7 +2626,7 @@ msgstr ""
 
 #: src/basic-syntax/compound-types.md:18
 msgid "Tuple assignment and access:"
-msgstr ""
+msgstr "タプルへのアクセスと代入："
 
 #: src/basic-syntax/compound-types.md:20
 msgid ""
@@ -2637,7 +2641,7 @@ msgstr ""
 
 #: src/basic-syntax/compound-types.md:32
 msgid "Arrays:"
-msgstr ""
+msgstr "配列："
 
 #: src/basic-syntax/compound-types.md:34
 msgid ""
@@ -2654,10 +2658,21 @@ msgid ""
 "\n"
 "* Adding `#`, eg `{a:#?}`, invokes a \"pretty printing\" format, which can be easier to read."
 msgstr ""
+"* 配列は、コンパイル時の定数である要素の型`T`と長さ`N`を持ちます。配列の要素数は、型の一部のため、"
+"`[u8; 3]`と`[u8; 4]`は異なる型となります。\n"
+"\n"
+"* リテラルを使用して、配列に値を代入する事ができます。\n"
+"\n"
+"* main関数内のprint文では、`Debug`トレイトの実装を要求するために`?`のフォーマット引数が使用されてい"
+"ます。`{}`がデフォルト、`{:?}`がデバッグ出力用に使われます。また、フォーマット文字列の後に引数の値"
+"を指定せずに`{a}`や`{a:?}`と書く事もできます。\n"
+"\n"
+"* `{a:#?}`のように`#`を追加する事で、より読みやすい形式で出力してくれる、「pretty print」フォーマッ"
+"トが適用されます。"
 
 #: src/basic-syntax/compound-types.md:47
 msgid "Tuples:"
-msgstr ""
+msgstr "タプル："
 
 #: src/basic-syntax/compound-types.md:49
 msgid ""
@@ -2674,6 +2689,16 @@ msgid ""
 "    * You can think of it as `void` that can be familiar to you from other \n"
 "      programming languages."
 msgstr ""
+"* 配列と同様に、タプルも固定長です。\n"
+"\n"
+"* タプルは、異なる型の値を組み合わせて複合型としてグループ化します。\n"
+"\n"
+"* タプルのフィールドは、`t.0`や`t.1`のように`.`と値のインデックスを使ってアクセスします。\n"
+"\n"
+"* 空のタプル`()`は、「ユニット型」とも呼ばれます。これは型であり、この型唯一の有効な値でもありま"
+"す。つまり、型と値の両方が`()`によって表されます。これは、関数や式からの帰り値を持たない事を表すた"
+"めに使われます。後のスライドで細かく見ていきます。\n"
+"    * 他言語でなじみのある`void`と捉える事ができます。"
 
 #: src/basic-syntax/references.md:1
 msgid "# References"
