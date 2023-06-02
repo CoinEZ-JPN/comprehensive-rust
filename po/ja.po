@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Comprehensive Rust 🦀\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-06-02 13:40+0900\n"
+"PO-Revision-Date: 2023-06-02 17:19+0900\n"
 "Last-Translator: Kenta Aratani <kentaaratani@coinez.jp>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
 "Language: ja\n"
@@ -2702,11 +2702,11 @@ msgstr ""
 
 #: src/basic-syntax/references.md:1
 msgid "# References"
-msgstr ""
+msgstr "# 参照"
 
 #: src/basic-syntax/references.md:3
 msgid "Like C++, Rust has references:"
-msgstr ""
+msgstr "C++と同様に、Rustにも参照があります："
 
 #: src/basic-syntax/references.md:5
 msgid ""
@@ -2722,7 +2722,7 @@ msgstr ""
 
 #: src/basic-syntax/references.md:14
 msgid "Some notes:"
-msgstr ""
+msgstr "注意点："
 
 #: src/basic-syntax/references.md:16
 msgid ""
@@ -2731,6 +2731,10 @@ msgid ""
 "  methods (try `ref_x.count_ones()`).\n"
 "* References that are declared as `mut` can be bound to different values over their lifetime."
 msgstr ""
+"* `ref_x`に代入する際には、CやC++のポインタと同じように参照外しが必要です。\n"
+"* Rustでは、一部の実装（特にメソッドの使用）において、自動的に参照外しが行われます。(例：`ref_x."
+"count_ones()`)。\n"
+"* `mut`で宣言された可変参照は、そのライフタイムの間に異なる値にバインドすることができます。"
 
 #: src/basic-syntax/references.md:25
 msgid ""
@@ -2738,14 +2742,16 @@ msgid ""
 "  &mut i32`. The first one represents a mutable reference which can be bound to\n"
 "  different values, while the second represents a reference to a mutable value."
 msgstr ""
+"* `let mut ref_x: &i32`と`let ref_x: &mut i32`の違いを説明してください。前者は異なる値にバインドが"
+"できる可変参照であり、後者は可変な値への参照を表しています。"
 
 #: src/basic-syntax/references-dangling.md:1
 msgid "# Dangling References"
-msgstr ""
+msgstr "# ダングリングポインタ"
 
 #: src/basic-syntax/references-dangling.md:3
 msgid "Rust will statically forbid dangling references:"
-msgstr ""
+msgstr "Rustは、静的にダングリングポインタが生成されないよう保証してくれます："
 
 #: src/basic-syntax/references-dangling.md:5
 msgid ""
@@ -2768,6 +2774,10 @@ msgid ""
 "  enough.\n"
 "* We will talk more about borrowing when we get to ownership."
 msgstr ""
+"* 参照とは、値の「借用」を意味します。\n"
+"* Rustは、すべての参照のライフタイムを追跡する事で、参照が常に有効である事を保証してくれる仕組みに"
+"なっています。\n"
+"* 借用については、所有権の章で少し詳しく説明します。"
 
 #: src/basic-syntax/slices.md:1
 msgid "# Slices"
