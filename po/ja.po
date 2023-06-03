@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Comprehensive Rust 🦀\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-06-03 12:24+0900\n"
+"PO-Revision-Date: 2023-06-03 16:16+0900\n"
 "Last-Translator: Kenta Aratani <kentaaratani@coinez.jp>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
 "Language: ja\n"
@@ -2933,13 +2933,15 @@ msgstr ""
 
 #: src/basic-syntax/functions.md:1
 msgid "# Functions"
-msgstr ""
+msgstr "# 関数"
 
 #: src/basic-syntax/functions.md:3
 msgid ""
 "A Rust version of the famous [FizzBuzz](https://en.wikipedia.org/wiki/Fizz_buzz) interview "
 "question:"
 msgstr ""
+"プログラミングの面接でよく出題される[FizzBuzz](https://en.wikipedia.org/wiki/Fizz_buzz)問題のRust版"
+"です："
 
 #: src/basic-syntax/functions.md:5
 msgid ""
@@ -2985,6 +2987,14 @@ msgid ""
 "* The range expression in the `for` loop in `print_fizzbuzz_to()` contains `=n`, which causes it "
 "to include the upper bound."
 msgstr ""
+"* `main`関数内で、その下に記述された関数を参照しています。前方宣言やヘッダーは必要ありません。\n"
+"* 引数宣言の後に引数の型定義が記述され（他の言語とは順番が逆）、戻り値の型が続きます。\n"
+"* 関数本体（またはブロック）の最後の式は、戻り値となります。式の最後にある`; `を省略してくださ"
+"い。\n"
+"* 関数によっては戻り値を持たず、`unit型`である`()`を返します。もし`-> ()`の戻り値の型が省略されてい"
+"る場合、コンパイラがこれを自動で推論してくれます。\n"
+"* `print_fizzbuzz_to()`関数内の`for`ループの範囲式には、`=n`が含まれており、これにより上限`n`が範囲"
+"に含まれます。"
 
 #: src/basic-syntax/rustdoc.md:1
 msgid "# Rustdoc"
@@ -2992,7 +3002,7 @@ msgstr ""
 
 #: src/basic-syntax/rustdoc.md:3
 msgid "All language items in Rust can be documented using special `///` syntax."
-msgstr ""
+msgstr "Rustのすべての言語要素は、`///`構文を使用してドキュメント化する事ができます。"
 
 #: src/basic-syntax/rustdoc.md:5
 msgid ""
@@ -3008,6 +3018,17 @@ msgid ""
 "}\n"
 "```"
 msgstr ""
+"```rust,editable\n"
+"/// 第一引数が、第二引数で割り切れるかどうかを判定してください。\n"
+"///\n"
+"/// もし第二引数がゼロの場合、返り値はfalseです。\n"
+"fn is_divisible_by(lhs: u32, rhs: u32) -> bool {\n"
+"    if rhs == 0 {\n"
+"        return false;  // 特殊ケース、早期リターン\n"
+"    }\n"
+"    lhs % rhs == 0     // ブロック内の最後の式が返り値です\n"
+"}\n"
+"```"
 
 #: src/basic-syntax/rustdoc.md:17
 msgid ""
@@ -3016,6 +3037,10 @@ msgid ""
 "[rustdoc](https://doc.rust-lang.org/rustdoc/what-is-rustdoc.html) tool. It is\n"
 "idiomatic to document all public items in an API using this pattern."
 msgstr ""
+"コンテンツはマークダウン（markdown）形式で扱われます。公開されたすべてのライブラリクレートは、"
+"[rustdoc](https://doc.rust-lang.org/rustdoc/what-is-rustdoc.html)ツールを使用して、[`docs.rs`]"
+"(https://docs.rs)に自動的にドキュメント化されます。API内のすべての公開アイテムをこのようにドキュメ"
+"ント化する事が一般的です。"
 
 #: src/basic-syntax/rustdoc.md:24
 msgid ""
@@ -3028,16 +3053,26 @@ msgid ""
 "* Inner doc comments are discussed later (in the page on modules) and need not\n"
 "  be addressed here."
 msgstr ""
+"* [`docs.rs/rand`](https://docs.rs/rand)を開いて、`rand`クレートのドキュメントを受講生に見せてくだ"
+"さい。\n"
+"\n"
+"* 本講座では、スライド上のスペースを節約するために、rustdocについては触れませんが、実際のコードでは"
+"必ず含まれます。\n"
+"\n"
+"* 内部のドキュメントコメントについては、後ほど（モジュールの章で）説明されるため、ここでは触れませ"
+"ん。"
 
 #: src/basic-syntax/methods.md:1 src/methods.md:1
 msgid "# Methods"
-msgstr ""
+msgstr "# メソッド"
 
 #: src/basic-syntax/methods.md:3
 msgid ""
 "Methods are functions associated with a type. The `self` argument of a method is\n"
 "an instance of the type it is associated with:"
 msgstr ""
+"メソッドは型に関連付けられた関数です。メソッドの` self` 引数は、それに関連付けられた型のインスタン"
+"スです："
 
 #: src/basic-syntax/methods.md:6
 msgid ""
@@ -3068,7 +3103,7 @@ msgstr ""
 
 #: src/basic-syntax/methods.md:30
 msgid "* We will look much more at methods in today's exercise and in tomorrow's class."
-msgstr ""
+msgstr "* 今日の練習問題と明日の講座でメソッドについて詳しく学びます。"
 
 #: src/basic-syntax/methods.md:34
 msgid ""
@@ -3083,14 +3118,24 @@ msgid ""
 "- Add a `Rectangle::new_square(width: u32)` constructor to illustrate that\n"
 "  constructors can take arbitrary parameters."
 msgstr ""
+"- `Rectangle::new`コンストラクタを追加し、`main`関数から呼び出してください:\n"
+"\n"
+"    ```rust,editable,compile_fail\n"
+"    fn new(width: u32, height: u32) -> Rectangle {\n"
+"        Rectangle { width, height }\n"
+"    }\n"
+"    ```\n"
+"\n"
+"- 任意の引数を受け取る事ができる事を示すために、`Rectangle::new_square(width: u32)`コンストラクタを"
+"追加します。"
 
 #: src/basic-syntax/functions-interlude.md:1
 msgid "# Function Overloading"
-msgstr ""
+msgstr "# 関数のオーバーロード"
 
 #: src/basic-syntax/functions-interlude.md:3
 msgid "Overloading is not supported:"
-msgstr ""
+msgstr "Rustには、関数のオーバーロード機能はありません："
 
 #: src/basic-syntax/functions-interlude.md:5
 msgid ""
@@ -3101,10 +3146,16 @@ msgid ""
 "  * All call sites have the same number of arguments.\n"
 "  * Macros are sometimes used as an alternative."
 msgstr ""
+"* 各関数には単一の実装があります：\n"
+"  * パラメータの数は変わりません。\n"
+"  * パラメータの型は変わりません。\n"
+"* デフォルト値はサポートされていません：\n"
+"  * すべての呼び出し箇所で、同じ数の引数が必要です。\n"
+"  * 代わりにマクロが使用される事があります。"
 
 #: src/basic-syntax/functions-interlude.md:12
 msgid "However, function parameters can be generic:"
-msgstr ""
+msgstr "ただし、パラメータの型をジェネリックとして指定する事ができます："
 
 #: src/basic-syntax/functions-interlude.md:14
 msgid ""
@@ -3125,6 +3176,8 @@ msgid ""
 "* When using generics, the standard library's `Into<T>` can provide a kind of limited\n"
 "  polymorphism on argument types. We will see more details in a later section."
 msgstr ""
+"* ジェネリクスを使用する際には、標準ライブラリの`Into<T>`が引数の型に対して制限付きの多相性を提供す"
+"る事ができます。詳細については後の章で詳しく見ていきます。"
 
 #: src/exercises/day-1/morning.md:1
 msgid "# Day 1: Morning Exercises"
