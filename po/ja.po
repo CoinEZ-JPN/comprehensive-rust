@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Comprehensive Rust 🦀\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-06-04 12:43+0900\n"
+"PO-Revision-Date: 2023-06-04 12:49+0900\n"
 "Last-Translator: Kenta Aratani <kentaaratani@coinez.jp>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
 "Language: ja\n"
@@ -3741,35 +3741,37 @@ msgstr ""
 
 #: src/memory-management.md:1
 msgid "# Memory Management"
-msgstr ""
+msgstr "# メモリ管理"
 
 #: src/memory-management.md:3
 msgid "Traditionally, languages have fallen into two broad categories:"
-msgstr ""
+msgstr "従来、プログラミング言語は大まかに2つのカテゴリに分類されてきました。"
 
 #: src/memory-management.md:5
 msgid ""
 "* Full control via manual memory management: C, C++, Pascal, ...\n"
 "* Full safety via automatic memory management at runtime: Java, Python, Go, Haskell, ..."
 msgstr ""
+"* 手動のメモリ管理による完全な制御：C、C++、Pascal、、、\n"
+"* 実行時の自動メモリ管理による完全な安全性：Java、Python、Go、Haskell、、、"
 
 #: src/memory-management.md:8
 msgid "Rust offers a new mix:"
-msgstr ""
+msgstr "Rustは新たな組み合わせを提供してくれます："
 
 #: src/memory-management.md:10
 msgid ""
 "> Full control *and* safety via compile time enforcement of correct memory\n"
 "> management."
-msgstr ""
+msgstr "正しいメモリ管理のコンパイル時強制による完全な制御と安全性を提供します。"
 
 #: src/memory-management.md:13
 msgid "It does this with an explicit ownership concept."
-msgstr ""
+msgstr "明示的な所有権の概念を使用してこれを実現します。"
 
 #: src/memory-management.md:15
 msgid "First, let's refresh how memory management works."
-msgstr ""
+msgstr "まず、メモリ管理の仕組みから復習していきましょう。"
 
 #: src/memory-management/stack-vs-heap.md:1
 msgid "# The Stack vs The Heap"
