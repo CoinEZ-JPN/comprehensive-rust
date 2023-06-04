@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Comprehensive Rust 🦀\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-06-04 15:28+0900\n"
+"PO-Revision-Date: 2023-06-04 15:49+0900\n"
 "Last-Translator: Kenta Aratani <kentaaratani@coinez.jp>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
 "Language: ja\n"
@@ -4042,11 +4042,11 @@ msgstr ""
 
 #: src/memory-management/rust.md:1
 msgid "# Memory Management in Rust"
-msgstr ""
+msgstr "# Rustのメモリ管理"
 
 #: src/memory-management/rust.md:3
 msgid "Memory management in Rust is a mix:"
-msgstr ""
+msgstr "Rustのメモリ管理は、ミックスされています："
 
 #: src/memory-management/rust.md:5
 msgid ""
@@ -4057,10 +4057,16 @@ msgid ""
 "* A Rust user can choose the right abstraction for the situation, some even have no cost at "
 "runtime like C."
 msgstr ""
+"* ガベージコレクタはありませんが、Javaのように安全で正確です。\n"
+"* 選択した抽象化（または抽象化の組み合わせ）によって、単一のユニークポインタ、参照カウント、または"
+"アトミック参照カウントのいずれかになります。\n"
+"* C++のようにスコープに基づくが、コンパイラが完全な遵守を強制します。\n"
+"* 状況に応じて適切な抽象化を選択する事ができます。抽象化次第では、Cのようにランタイムコストがかから"
+"ない場合もあります。"
 
 #: src/memory-management/rust.md:10
 msgid "It achieves this by modeling _ownership_ explicitly."
-msgstr ""
+msgstr "これらは、所有権を明示的にモデル化することによって実現されます。"
 
 #: src/memory-management/rust.md:14
 msgid ""
@@ -4070,6 +4076,11 @@ msgid ""
 "\n"
 "* You may be asked about destructors here, the [Drop] trait is the Rust equivalent."
 msgstr ""
+"* この時点で、受講生から「どうやって？」という質問があった場合、Rustでは通常[Box]、[Vec]、[Rc]、"
+"[Arc]などのRAIIラッパ型が使用され、所有権とメモリ割り当てを様々な方法でカプセル化し、Cで起こり得る"
+"エラーを防止します。\n"
+"\n"
+"* ここでデストラクタについて尋ねられるかもしれませんが、Rustでの相当物は[Drop]トレイトです。"
 
 #: src/memory-management/comparison.md:1
 msgid "# Comparison"
