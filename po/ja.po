@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Comprehensive Rust 🦀\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-06-04 16:14+0900\n"
+"PO-Revision-Date: 2023-06-04 19:16+0900\n"
 "Last-Translator: Kenta Aratani <kentaaratani@coinez.jp>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
 "Language: ja\n"
@@ -4158,13 +4158,14 @@ msgstr ""
 
 #: src/ownership.md:1
 msgid "# Ownership"
-msgstr ""
+msgstr "# 所有権"
 
 #: src/ownership.md:3
 msgid ""
 "All variable bindings have a _scope_ where they are valid and it is an error to\n"
 "use a variable outside its scope:"
 msgstr ""
+"すべての変数の束縛には、有効なスコープがあり、その範囲外で変数を使用するとエラーが発生します："
 
 #: src/ownership.md:6
 msgid ""
@@ -4187,6 +4188,9 @@ msgid ""
 "* A destructor can run here to free up resources.\n"
 "* We say that the variable _owns_ the value."
 msgstr ""
+"* スコープの終わりに達すると、変数は「ドロップ」され、データは解放されます。\n"
+"* ここでデストラクタが実行され、リソースが解放されます。\n"
+"* 変数が値を「所有」している、という言い方をします。"
 
 #: src/ownership/move-semantics.md:1
 msgid "# Move Semantics"
