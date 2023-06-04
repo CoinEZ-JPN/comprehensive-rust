@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Comprehensive Rust 🦀\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-06-04 12:25+0900\n"
+"PO-Revision-Date: 2023-06-04 12:43+0900\n"
 "Last-Translator: Kenta Aratani <kentaaratani@coinez.jp>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
 "Language: ja\n"
@@ -3680,13 +3680,15 @@ msgstr ""
 
 #: src/basic-syntax/scopes-shadowing.md:1
 msgid "# Scopes and Shadowing"
-msgstr ""
+msgstr "# スコープとシャドーイング"
 
 #: src/basic-syntax/scopes-shadowing.md:3
 msgid ""
 "You can shadow variables, both those from outer scopes and variables from the\n"
 "same scope:"
 msgstr ""
+"変数のシャドーイングができます。これは、外側のスコープからの変数や同じスコープ内の変数の両方に対し"
+"て行う事ができます。"
 
 #: src/basic-syntax/scopes-shadowing.md:6
 msgid ""
@@ -3718,6 +3720,12 @@ msgid ""
 "* The following code demonstrates why the compiler can't simply reuse memory locations when "
 "shadowing an immutable variable in a scope, even if the type does not change."
 msgstr ""
+"* 定義： シャドーイングが行われた場合、変数のメモリ位置が同時に存在するため、変更とは異なります。"
+"コード内の使用場所によって、同じ名前で両方の変数が利用可能です。\n"
+"* シャドーイングされた変数は、異なる型を持つ事ができます。\n"
+"* シャドーイングは最初は分かりにくいかもしれませんが、`.unwrap()`の後に値を保持するのに便利です。\n"
+"* 次のコードは、スコープ内で不変変数をシャドーイングする場合、型が変わらなくてもコンパイラがメモリ"
+"位置を再利用できない理由を示しています。"
 
 #: src/basic-syntax/scopes-shadowing.md:30
 msgid ""
