@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Comprehensive Rust 🦀\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-06-04 15:23+0900\n"
+"PO-Revision-Date: 2023-06-04 15:28+0900\n"
 "Last-Translator: Kenta Aratani <kentaaratani@coinez.jp>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
 "Language: ja\n"
@@ -4007,19 +4007,21 @@ msgstr ""
 
 #: src/memory-management/garbage-collection.md:1
 msgid "# Automatic Memory Management"
-msgstr ""
+msgstr "# 自動メモリ管理"
 
 #: src/memory-management/garbage-collection.md:3
 msgid ""
 "An alternative to manual and scope-based memory management is automatic memory\n"
 "management:"
-msgstr ""
+msgstr "手動およびスコープに基づいたメモリ管理の代替として、自動メモリ管理があります："
 
 #: src/memory-management/garbage-collection.md:6
 msgid ""
 "* The programmer never allocates or deallocates memory explicitly.\n"
 "* A garbage collector finds unused memory and deallocates it for the programmer."
 msgstr ""
+"* プログラマーは、明示的にメモリの割り当てや解放を行いません。\n"
+"* ガベージコレクタが使用されていないメモリを見つけ、プログラマーのために解放します。"
 
 #: src/memory-management/garbage-collection.md:9
 msgid "## Java Example"
@@ -4027,7 +4029,7 @@ msgstr ""
 
 #: src/memory-management/garbage-collection.md:11
 msgid "The `person` object is not deallocated after `sayHello` returns:"
-msgstr ""
+msgstr "`sayHello`関数から返っても、`person` オブジェクトは解放されません："
 
 #: src/memory-management/garbage-collection.md:13
 msgid ""
