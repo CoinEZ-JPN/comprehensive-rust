@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Comprehensive Rust 🦀\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-06-03 16:16+0900\n"
+"PO-Revision-Date: 2023-06-04 10:05+0900\n"
 "Last-Translator: Kenta Aratani <kentaaratani@coinez.jp>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
 "Language: ja\n"
@@ -3181,11 +3181,11 @@ msgstr ""
 
 #: src/exercises/day-1/morning.md:1
 msgid "# Day 1: Morning Exercises"
-msgstr ""
+msgstr "# Day 1： AM 練習問題"
 
 #: src/exercises/day-1/morning.md:3
 msgid "In these exercises, we will explore two parts of Rust:"
-msgstr ""
+msgstr "ここでは、以下の復習をます："
 
 #: src/exercises/day-1/morning.md:5
 msgid ""
@@ -3193,10 +3193,13 @@ msgid ""
 "\n"
 "* Arrays and `for` loops."
 msgstr ""
+"* 暗黙的な型変換。\n"
+"\n"
+"* 配列と`for`ループ。"
 
 #: src/exercises/day-1/morning.md:11
 msgid "A few things to consider while solving the exercises:"
-msgstr ""
+msgstr "練習問題を解く際の注意点："
 
 #: src/exercises/day-1/morning.md:13
 msgid ""
@@ -3206,12 +3209,17 @@ msgid ""
 "\n"
 "* Alternatively, use the Rust Playground."
 msgstr ""
+"* できればローカルにRustをインストールして解いてください。エディタで自動補完が利用できます。Rustの"
+"インストールに関しては、[Using Cargo]ページを参照してください。\n"
+"\n"
+"* もしくは、Rust Playgroundを使用してください。"
 
 #: src/exercises/day-1/morning.md:19
 msgid ""
 "The code snippets are not editable on purpose: the inline code snippets lose\n"
 "their state if you navigate away from the page."
 msgstr ""
+"インラインのコードスニペットは、ページ移動すると状態が失われるため、わざと編集不可となっています。"
 
 #: src/exercises/day-1/morning.md:22 src/exercises/day-1/afternoon.md:11
 #: src/exercises/day-2/morning.md:11 src/exercises/day-2/afternoon.md:7
@@ -3219,7 +3227,7 @@ msgstr ""
 #: src/exercises/bare-metal/afternoon.md:7 src/exercises/concurrency/morning.md:12
 #: src/exercises/concurrency/afternoon.md:13
 msgid "After looking at the exercises, you can look at the [solutions] provided."
-msgstr ""
+msgstr "練習問題を確認してから[解答]を確認してください。"
 
 #: src/exercises/day-1/implicit-conversions.md:1
 msgid "# Implicit Conversions"
