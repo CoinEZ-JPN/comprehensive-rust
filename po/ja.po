@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Comprehensive Rust 🦀\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-06-04 10:05+0900\n"
+"PO-Revision-Date: 2023-06-04 10:27+0900\n"
 "Last-Translator: Kenta Aratani <kentaaratani@coinez.jp>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
 "Language: ja\n"
@@ -3231,13 +3231,15 @@ msgstr "練習問題を確認してから[解答]を確認してください。"
 
 #: src/exercises/day-1/implicit-conversions.md:1
 msgid "# Implicit Conversions"
-msgstr ""
+msgstr "# 暗黙的な型変換"
 
 #: src/exercises/day-1/implicit-conversions.md:3
 msgid ""
 "Rust will not automatically apply _implicit conversions_ between types ([unlike\n"
 "C++][3]). You can see this in a program like this:"
 msgstr ""
+"Rustでは、（[C++とは異なり][3]）、自動的に型変換は適用されません。以下のようなプログラムでこれを確"
+"認する事ができます："
 
 #: src/exercises/day-1/implicit-conversions.md:6
 msgid ""
@@ -3263,6 +3265,9 @@ msgid ""
 "Implementing these traits is how a type expresses that it can be converted into\n"
 "another type."
 msgstr ""
+"Rustの整数型は、[`From<T>`][1]と[`Into<T>`][2]トレイトを実装しており、型間の変換が可能です。"
+"`From<T>`トレイトには単一の`from()`メソッドがあり、`Into<T>`トレイトには単一の`into()`メソッドがあ"
+"ります。これらのトレイトを実装する事によって、ある型が別の型に変換できる事が表現されます。"
 
 #: src/exercises/day-1/implicit-conversions.md:25
 msgid ""
@@ -3271,12 +3276,17 @@ msgid ""
 "`i16::from(x)`. Or, simpler, with `x.into()`, because `From<i8> for i16`\n"
 "implementation automatically create an implementation of `Into<i16> for i8`."
 msgstr ""
+"標準ライブラリには、`From<i8> for i16`の実装があります。これは、変数`x`を`i8`型から`i16`型に変換す"
+"るために、`i16::from(x)`または`x.into()`を呼び出すことができる事を意味します。`From<i8> for i16`の"
+"実装によって、`i8`から`i16`への変換のための`Into<i16> for i8`の実装が自動的に生成されます。"
 
 #: src/exercises/day-1/implicit-conversions.md:30
 msgid ""
 "The same applies for your own `From` implementations for your own types, so it is\n"
 "sufficient to only implement `From` to get a respective `Into` implementation automatically."
 msgstr ""
+"同じ事が、カスタム型に対する`From`の実装にも適用されます。つまり、`From`を実装するだけで、対応する"
+"`Into`の実装も自動的に取得する事ができます。"
 
 #: src/exercises/day-1/implicit-conversions.md:33
 msgid ""
@@ -3290,6 +3300,13 @@ msgid ""
 "   [standard library documentation][1] to see if `From<T>` is implemented for\n"
 "   the pairs you check."
 msgstr ""
+"1. 上記プログラムを実行し、コンパイラエラーを確認してください。\n"
+"\n"
+"2. 上記のコードで、型変換に`into()`を使用してください。\n"
+"\n"
+"3. `x`と`y`の型を他の型（例: `f32`、`bool`、`i128`）に変更して、どの組み合わせの変換が可能かを確認"
+"してください。小さな型から大きな型に変換したり、その逆も試してみてください。[標準ライブラリのドキュ"
+"メント][1]を確認して、どのペアに対して`From<T>`が実装されているかどうかを確認してください。"
 
 #: src/exercises/day-1/for-loops.md:1
 msgid "# Arrays and `for` Loops"
