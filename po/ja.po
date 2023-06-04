@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Comprehensive Rust 🦀\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-06-04 11:24+0900\n"
+"PO-Revision-Date: 2023-06-04 11:35+0900\n"
 "Last-Translator: Kenta Aratani <kentaaratani@coinez.jp>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
 "Language: ja\n"
@@ -3511,11 +3511,11 @@ msgstr ""
 
 #: src/basic-syntax/type-inference.md:1
 msgid "# Type Inference"
-msgstr ""
+msgstr "# 型推論"
 
 #: src/basic-syntax/type-inference.md:3
 msgid "Rust will look at how the variable is _used_ to determine the type:"
-msgstr ""
+msgstr "Rustは、変数の使用方法に基づいて型を推論します。"
 
 #: src/basic-syntax/type-inference.md:5
 msgid ""
@@ -3544,6 +3544,8 @@ msgid ""
 "This slide demonstrates how the Rust compiler infers types based on constraints given by variable "
 "declarations and usages."
 msgstr ""
+"このスライドでは、Rustのコンパイラが変数の宣言や使用から受ける制約に基づいて型を推論する方法を示し"
+"ています。"
 
 #: src/basic-syntax/type-inference.md:28
 msgid ""
@@ -3553,12 +3555,17 @@ msgid ""
 "declaration of a type.\n"
 "The compiler does the job for us and helps us write more concise code."
 msgstr ""
+"重要な点：このように宣言された変数は、いわゆる動的な「任意型」のデータを保持するわけではありませ"
+"ん。このような宣言によって生成されるマシンコードは、明示的な型の宣言と同じです。コンパイラが私たち"
+"の代わりに処理を行い、より簡潔なコードを書きやすくしてくれます。"
 
 #: src/basic-syntax/type-inference.md:32
 msgid ""
 "The following code tells the compiler to copy into a certain generic container without the code "
 "ever explicitly specifying the contained type, using `_` as a placeholder:"
 msgstr ""
+"次のコードは、プレースホルダとして`_`を使用する事で、コードが明示的に含まれる型を指定せずに、特定の"
+"ジェネリックなコンテナにコピーするようコンパイラに指示しています。"
 
 #: src/basic-syntax/type-inference.md:34
 msgid ""
@@ -3581,6 +3588,9 @@ msgid ""
 "on `FromIterator`, which [`HashSet`](https://doc.rust-lang.org/std/iter/trait.FromIterator.html) "
 "implements."
 msgstr ""
+"[`collect`](https://doc.rust-lang.org/stable/std/iter/trait.Iterator.html#method.collect)は、"
+"[`HashSet`](https://doc.rust-lang.org/std/iter/trait.FromIterator.html)が実装している`FromIterator`"
+"を利用しています。"
 
 #: src/basic-syntax/static-and-const.md:1
 msgid "# Static and Constant Variables"
