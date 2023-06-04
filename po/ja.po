@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Comprehensive Rust 🦀\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-06-04 15:49+0900\n"
+"PO-Revision-Date: 2023-06-04 16:14+0900\n"
 "Last-Translator: Kenta Aratani <kentaaratani@coinez.jp>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
 "Language: ja\n"
@@ -4084,15 +4084,15 @@ msgstr ""
 
 #: src/memory-management/comparison.md:1
 msgid "# Comparison"
-msgstr ""
+msgstr "# 比較"
 
 #: src/memory-management/comparison.md:3
 msgid "Here is a rough comparison of the memory management techniques."
-msgstr ""
+msgstr "以下は、メモリ管理技術のざっくりとした比較です。"
 
 #: src/memory-management/comparison.md:5
 msgid "## Pros of Different Memory Management Techniques"
-msgstr ""
+msgstr "## 異なるメモリ管理技術のメリット"
 
 #: src/memory-management/comparison.md:7
 msgid ""
@@ -4109,10 +4109,22 @@ msgid ""
 "  * No runtime overhead.\n"
 "  * Safe and correct."
 msgstr ""
+"* Cのような手動管理：\n"
+"  * ランタイムオーバーヘッドがない。\n"
+"* Javaのような自動管理：\n"
+"  * 完全に自動化されている。\n"
+"  * 安全で正確。\n"
+"* C++のようなスコープベース：\n"
+"  * 部分的に自動化されている。\n"
+"  * ランタイムオーバーヘッドがない。\n"
+"* Rustのコンパイラによるスコープベース：\n"
+"  * コンパイラによって強制される。\n"
+"  * ランタイムオーバーヘッドがない。\n"
+"  * 安全で正確。"
 
 #: src/memory-management/comparison.md:20
 msgid "## Cons of Different Memory Management Techniques"
-msgstr ""
+msgstr "## 異なるメモリ管理技術のデメリット"
 
 #: src/memory-management/comparison.md:22
 msgid ""
@@ -4130,6 +4142,19 @@ msgid ""
 "  * Some upfront complexity.\n"
 "  * Can reject valid programs."
 msgstr ""
+"* Cのような手動管理：\n"
+"  * Use-after-free。\n"
+"  * 二重解放。\n"
+"  * メモリリーク。\n"
+"* Javaのような自動管理：\n"
+"  * ガベージコレクションによる一時停止。\n"
+"  * デストラクタの遅延。\n"
+"* C++のようなスコープベース：\n"
+"  * 複雑で、プログラマーによる明示的なオプトインが必要。\n"
+"  * Use-after-freeの可能性がある。\n"
+"* Rustのコンパイラによるスコープベース：\n"
+"  * 慣れるまで時間がかかる。\n"
+"  * 本来有効であるように見えるコードを拒否する可能性がある。"
 
 #: src/ownership.md:1
 msgid "# Ownership"
