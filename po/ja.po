@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Comprehensive Rust 🦀\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-06-04 12:49+0900\n"
+"PO-Revision-Date: 2023-06-04 13:01+0900\n"
 "Last-Translator: Kenta Aratani <kentaaratani@coinez.jp>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
 "Language: ja\n"
@@ -3775,7 +3775,7 @@ msgstr "まず、メモリ管理の仕組みから復習していきましょう
 
 #: src/memory-management/stack-vs-heap.md:1
 msgid "# The Stack vs The Heap"
-msgstr ""
+msgstr "# スタック vs ヒープ"
 
 #: src/memory-management/stack-vs-heap.md:3
 msgid ""
@@ -3790,6 +3790,16 @@ msgid ""
 "  * Slightly slower than the stack: some book-keeping needed.\n"
 "  * No guarantee of memory locality."
 msgstr ""
+"* スタック（Stack）：ローカル変数のための連続したメモリ領域。\n"
+"  * 値はコンパイル時に既知の固定サイズを持つ。\n"
+"  * 高速：スタックポインタを移動するだけ。\n"
+"  * 管理が容易：関数呼び出しに従う。\n"
+"  * メモリの局所性が高い。\n"
+"\n"
+"* ヒープ（Heap）：関数呼び出しの外部に値を格納する領域。\n"
+"  * 値は実行時に決定される動的なサイズを持つ。n\n"
+"  * スタックよりもわずかに遅い：ブックキーピングが必要。\n"
+"  * メモリの局所性は保証されない。"
 
 #: src/memory-management/stack.md:1
 msgid "# Stack Memory"
