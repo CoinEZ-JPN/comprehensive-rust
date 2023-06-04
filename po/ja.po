@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Comprehensive Rust 🦀\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-06-04 13:22+0900\n"
+"PO-Revision-Date: 2023-06-04 13:26+0900\n"
 "Last-Translator: Kenta Aratani <kentaaratani@coinez.jp>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
 "Language: ja\n"
@@ -3891,24 +3891,26 @@ msgstr ""
 
 #: src/memory-management/manual.md:1
 msgid "# Manual Memory Management"
-msgstr ""
+msgstr "# 手動でのメモリ管理"
 
 #: src/memory-management/manual.md:3
 msgid "You allocate and deallocate heap memory yourself."
-msgstr ""
+msgstr "自分自身でヒープメモリの割り当てと解放を行います。"
 
 #: src/memory-management/manual.md:5
 msgid ""
 "If not done with care, this can lead to crashes, bugs, security vulnerabilities, and memory leaks."
 msgstr ""
+"注意して行わなければ、これはクラッシュ、バグ、セキュリティの脆弱性、メモリリークを引き起こす可能性"
+"があります。"
 
 #: src/memory-management/manual.md:7
 msgid "## C Example"
-msgstr ""
+msgstr "## Cを使った例"
 
 #: src/memory-management/manual.md:9
 msgid "You must call `free` on every pointer you allocate with `malloc`:"
-msgstr ""
+msgstr "`malloc`で割り当てたすべてのポインタに対して、`free`を呼び出す必要があります："
 
 #: src/memory-management/manual.md:11
 msgid ""
@@ -3922,12 +3924,23 @@ msgid ""
 "}\n"
 "```"
 msgstr ""
+"```c\n"
+"void foo(size_t n) {\n"
+"    int* int_array = (int*)malloc(n * sizeof(int));\n"
+"    //\n"
+"    // … その他処理\n"
+"    //\n"
+"    free(int_array);\n"
+"}\n"
+"```"
 
 #: src/memory-management/manual.md:21
 msgid ""
 "Memory is leaked if the function returns early between `malloc` and `free`: the\n"
 "pointer is lost and we cannot deallocate the memory."
 msgstr ""
+"関数が`malloc`と`free`の間で早期リターンする場合、メモリリークが発生します。ポインタが失われ、メモ"
+"リを解放する事ができません。"
 
 #: src/memory-management/scope-based.md:1
 msgid "# Scope-Based Memory Management"
