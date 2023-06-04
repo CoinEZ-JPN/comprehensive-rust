@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Comprehensive Rust 🦀\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-06-04 11:06+0900\n"
+"PO-Revision-Date: 2023-06-04 11:24+0900\n"
 "Last-Translator: Kenta Aratani <kentaaratani@coinez.jp>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
 "Language: ja\n"
@@ -3476,13 +3476,15 @@ msgstr "ボーナスセクションの答えも[解答](solutions-morning.md#arr
 
 #: src/basic-syntax/variables.md:1
 msgid "# Variables"
-msgstr ""
+msgstr "# 変数"
 
 #: src/basic-syntax/variables.md:3
 msgid ""
 "Rust provides type safety via static typing. Variable bindings are immutable by\n"
 "default:"
 msgstr ""
+"Rustは、静的な型付けによりタイプ（型）セーフティ（安全性）を提供します。変数のバインディングはデ"
+"フォルトで不変です。"
 
 #: src/basic-syntax/variables.md:6
 msgid ""
@@ -3503,6 +3505,9 @@ msgid ""
 "* Note that since `println!` is a macro, `x` is not moved, even using the function like syntax of "
 "`println!(\"x: {}\", x)`"
 msgstr ""
+"* 型の推論により`i32`は任意です。コースが進むにつれて、型表記を少しずつ減らします\n"
+"* `println!`はマクロのため、関数のような構文 `println!(“x: {}”, x)`を使用しても、`x`の移動は起こり"
+"ません"
 
 #: src/basic-syntax/type-inference.md:1
 msgid "# Type Inference"
