@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Comprehensive Rust 🦀\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-06-04 19:16+0900\n"
+"PO-Revision-Date: 2023-06-04 19:39+0900\n"
 "Last-Translator: Kenta Aratani <kentaaratani@coinez.jp>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
 "Language: ja\n"
@@ -4194,11 +4194,11 @@ msgstr ""
 
 #: src/ownership/move-semantics.md:1
 msgid "# Move Semantics"
-msgstr ""
+msgstr "# ムーブセマンティクス"
 
 #: src/ownership/move-semantics.md:3
 msgid "An assignment will transfer ownership between variables:"
-msgstr ""
+msgstr "代入は変数間で所有権を移動します："
 
 #: src/ownership/move-semantics.md:5
 msgid ""
@@ -4220,6 +4220,11 @@ msgid ""
 "* When `s2` goes out of scope, the string data is freed.\n"
 "* There is always _exactly_ one variable binding which owns a value."
 msgstr ""
+"* `s1`を`s2`に代入する事で所有権が移動します。\n"
+"* データは`s1`から移動され、`s1`にはアクセスできなくなります。\n"
+"* `s1`は所有権を持っていないため、スコープが終わっても何も起こりません。\n"
+"* `s2`のスコープが終わると、文字列データは解放されます。\n"
+"* 常に一つの変数束縛が値を所有しています。"
 
 #: src/ownership/move-semantics.md:22
 msgid ""
@@ -4228,6 +4233,10 @@ msgid ""
 "\n"
 "* In Rust, clones are explicit (by using `clone`)."
 msgstr ""
+"* C++のデフォルトでは、`std::move`を使用しない限り（かつ移動コンストラクタが定義されている！）、コ"
+"ピーが行われます。これはRustとは逆の挙動です。\n"
+"\n"
+"* Rustでは、クローンは（`clone`を使用する事で）明示的に行われます。"
 
 #: src/ownership/moved-strings-rust.md:1
 msgid "# Moved Strings in Rust"
