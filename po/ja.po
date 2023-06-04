@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Comprehensive Rust 🦀\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-06-04 13:26+0900\n"
+"PO-Revision-Date: 2023-06-04 15:23+0900\n"
 "Last-Translator: Kenta Aratani <kentaaratani@coinez.jp>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
 "Language: ja\n"
@@ -3944,11 +3944,12 @@ msgstr ""
 
 #: src/memory-management/scope-based.md:1
 msgid "# Scope-Based Memory Management"
-msgstr ""
+msgstr "# スコープに基づくメモリ管理"
 
 #: src/memory-management/scope-based.md:3
 msgid "Constructors and destructors let you hook into the lifetime of an object."
 msgstr ""
+"コンストラクタとデストラクタを使用することで、オブジェクトのライフタイムにフックする事ができます。"
 
 #: src/memory-management/scope-based.md:5
 msgid ""
@@ -3956,16 +3957,20 @@ msgid ""
 "destroyed. The compiler guarantees that this happens, even if an exception is\n"
 "raised."
 msgstr ""
+"ポインタをオブジェクトでラップする事で、オブジェクトが破棄される時にメモリを解放する事ができます。"
+"コンパイラは、例外が発生してもメモリが解放される事を保証します。"
 
 #: src/memory-management/scope-based.md:9
 msgid ""
 "This is often called _resource acquisition is initialization_ (RAII) and gives\n"
 "you smart pointers."
 msgstr ""
+"これは一般的に _resource acquisition is initialization_ (RAII)と呼ばれ、スマートポインタを提供しま"
+"す。"
 
 #: src/memory-management/scope-based.md:12
 msgid "## C++ Example"
-msgstr ""
+msgstr "## C++の例"
 
 #: src/memory-management/scope-based.md:14
 msgid ""
@@ -3983,10 +3988,14 @@ msgid ""
 "* At the end of `say_hello`, the `std::unique_ptr` destructor will run.\n"
 "* The destructor frees the `Person` object it points to."
 msgstr ""
+"* `std::unique_ptr`オブジェクトはスタック上に割り当てられ、ヒープ上に割り当てられたメモリを指しま"
+"す。\n"
+"* `say_hello`の終わりに、`std::unique_ptr`のデストラクタが実行されます。\n"
+"* デストラクタは、指している`Person`オブジェクトを解放します。"
 
 #: src/memory-management/scope-based.md:25
 msgid "Special move constructors are used when passing ownership to a function:"
-msgstr ""
+msgstr "所有権を関数に渡す際に特別なムーブコンストラクタが使用されます。"
 
 #: src/memory-management/scope-based.md:27
 msgid ""
