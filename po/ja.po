@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Comprehensive Rust 🦀\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-06-04 10:27+0900\n"
+"PO-Revision-Date: 2023-06-04 11:06+0900\n"
 "Last-Translator: Kenta Aratani <kentaaratani@coinez.jp>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
 "Language: ja\n"
@@ -3310,11 +3310,11 @@ msgstr ""
 
 #: src/exercises/day-1/for-loops.md:1
 msgid "# Arrays and `for` Loops"
-msgstr ""
+msgstr "# 配列と`for`ループ"
 
 #: src/exercises/day-1/for-loops.md:3
 msgid "We saw that an array can be declared like this:"
-msgstr ""
+msgstr "配列の宣言は以前確認した通りです："
 
 #: src/exercises/day-1/for-loops.md:5
 msgid ""
@@ -3325,7 +3325,7 @@ msgstr ""
 
 #: src/exercises/day-1/for-loops.md:9
 msgid "You can print such an array by asking for its debug representation with `{:?}`:"
-msgstr ""
+msgstr "`{:?}`を使用して、配列を次のようにprintする事ができます。"
 
 #: src/exercises/day-1/for-loops.md:11
 msgid ""
@@ -3341,7 +3341,7 @@ msgstr ""
 msgid ""
 "Rust lets you iterate over things like arrays and ranges using the `for`\n"
 "keyword:"
-msgstr ""
+msgstr "Rustでは、`for`キーワードを使用して、配列や範囲などの要素を反復処理する事ができます。"
 
 #: src/exercises/day-1/for-loops.md:21
 msgid ""
@@ -3368,6 +3368,8 @@ msgid ""
 "Use the above to write a function `pretty_print` which pretty-print a matrix and\n"
 "a function `transpose` which will transpose a matrix (turn rows into columns):"
 msgstr ""
+"上記の内容を使用して、`pretty_print`フォーマットでmatrixを表示してくれる`pretty_print`関数と、"
+"matrixの転置（行を列に変換する）を行う`transpose`関数を作成してください："
 
 #: src/exercises/day-1/for-loops.md:41
 msgid ""
@@ -3380,13 +3382,13 @@ msgstr ""
 
 #: src/exercises/day-1/for-loops.md:47
 msgid "Hard-code both functions to operate on 3 × 3 matrices."
-msgstr ""
+msgstr "3 × 3のmatrixに対して動作するように、両関数をハードコードしてください。"
 
 #: src/exercises/day-1/for-loops.md:49
 msgid ""
 "Copy the code below to <https://play.rust-lang.org/> and implement the\n"
 "functions:"
-msgstr ""
+msgstr "コードを <https://play.rust-lang.org/>にコピーし、関数を実装してください。"
 
 #: src/exercises/day-1/for-loops.md:52
 msgid ""
@@ -3418,6 +3420,33 @@ msgid ""
 "}\n"
 "```"
 msgstr ""
+"```rust,should_panic\n"
+"// TODO: 実装が完了したら、このメッセージを削除してください。\n"
+"#![allow(unused_variables, dead_code)]\n"
+"\n"
+"fn transpose(matrix: [[i32; 3]; 3]) -> [[i32; 3]; 3] {\n"
+"    unimplemented!()\n"
+"}\n"
+"\n"
+"fn pretty_print(matrix: &[[i32; 3]; 3]) {\n"
+"    unimplemented!()\n"
+"}\n"
+"\n"
+"fn main() {\n"
+"    let matrix = [\n"
+"        [101, 102, 103], // <— コメントにより、rustfmtは改行を追加してくれます。\n"
+"        [201, 202, 203],\n"
+"        [301, 302, 303],\n"
+"    ];\n"
+"\n"
+"    println!(“matrix:”);\n"
+"    pretty_print(&matrix);\n"
+"\n"
+"    let transposed = transpose(matrix);\n"
+"    println!(“transposed:”);\n"
+"    pretty_print(&transposed);\n"
+"}\n"
+"```"
 
 #: src/exercises/day-1/for-loops.md:80
 msgid "## Bonus Question"
@@ -3429,18 +3458,21 @@ msgid ""
 "argument and return types? Something like `&[&[i32]]` for a two-dimensional\n"
 "slice-of-slices. Why or why not?"
 msgstr ""
+"ハードコードされた3 × 3 matrixの代わりに引数と戻り値の型として、`&[i32]`スライスを使用する事はでき"
+"ますか？2次元の場合、`&[&[i32]]`のようなスライスのスライスを使用します。また、使用できる・できない"
+"理由はなぜでしょうか？"
 
 #: src/exercises/day-1/for-loops.md:87
 msgid ""
 "See the [`ndarray` crate](https://docs.rs/ndarray/) for a production quality\n"
 "implementation."
-msgstr ""
+msgstr "プロダクションクオリティの実装については、`ndarray`クレートを参照してください。"
 
 #: src/exercises/day-1/for-loops.md:92
 msgid ""
 "The solution and the answer to the bonus section are available in the \n"
 "[Solution](solutions-morning.md#arrays-and-for-loops) section."
-msgstr ""
+msgstr "ボーナスセクションの答えも[解答](solutions-morning.md#arrays-and-for-loops) で確認できます。"
 
 #: src/basic-syntax/variables.md:1
 msgid "# Variables"
