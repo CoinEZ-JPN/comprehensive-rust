@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Comprehensive Rust 🦀\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-06-04 19:39+0900\n"
+"PO-Revision-Date: 2023-06-05 11:06+0900\n"
 "Last-Translator: Kenta Aratani <kentaaratani@coinez.jp>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
 "Language: ja\n"
@@ -4240,7 +4240,7 @@ msgstr ""
 
 #: src/ownership/moved-strings-rust.md:1
 msgid "# Moved Strings in Rust"
-msgstr ""
+msgstr "# 文字列の移動"
 
 #: src/ownership/moved-strings-rust.md:3
 msgid ""
@@ -4257,10 +4257,12 @@ msgid ""
 "* The heap data from `s1` is reused for `s2`.\n"
 "* When `s1` goes out of scope, nothing happens (it has been moved from)."
 msgstr ""
+"* `s1`のヒープデータは`s2`に再利用されます。\n"
+"* `s1`がスコープから外れても何も起こりません（移動されているため）。"
 
 #: src/ownership/moved-strings-rust.md:13
 msgid "Before move to `s2`:"
-msgstr ""
+msgstr "`s2`への移動前："
 
 #: src/ownership/moved-strings-rust.md:15
 msgid ""
@@ -4282,7 +4284,7 @@ msgstr ""
 
 #: src/ownership/moved-strings-rust.md:30
 msgid "After move to `s2`:"
-msgstr ""
+msgstr "`s2`への移動後："
 
 #: src/ownership/moved-strings-rust.md:32
 msgid ""
@@ -4310,11 +4312,11 @@ msgstr ""
 
 #: src/ownership/double-free-modern-cpp.md:1
 msgid "# Double Frees in Modern C++"
-msgstr ""
+msgstr "# 現代C++における二重解放"
 
 #: src/ownership/double-free-modern-cpp.md:3
 msgid "Modern C++ solves this differently:"
-msgstr ""
+msgstr "現代C++では、この問題は異なる方法で解決されます："
 
 #: src/ownership/double-free-modern-cpp.md:5
 msgid ""
@@ -4329,10 +4331,12 @@ msgid ""
 "* The heap data from `s1` is duplicated and `s2` gets its own independent copy.\n"
 "* When `s1` and `s2` go out of scope, they each free their own memory."
 msgstr ""
+"* `s1`のヒープデータは複製され、`s2`は独立したコピーを取得します。\n"
+"* `s1`と`s2`がスコープから外れると、それぞれのメモリが解放されます。"
 
 #: src/ownership/double-free-modern-cpp.md:13
 msgid "Before copy-assignment:"
-msgstr ""
+msgstr "コピー代入の前："
 
 #: src/ownership/double-free-modern-cpp.md:16
 msgid ""
@@ -4353,7 +4357,7 @@ msgstr ""
 
 #: src/ownership/double-free-modern-cpp.md:30
 msgid "After copy-assignment:"
-msgstr ""
+msgstr "コピー代入の後："
 
 #: src/ownership/double-free-modern-cpp.md:32
 msgid ""
