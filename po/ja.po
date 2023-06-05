@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Comprehensive Rust 🦀\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-06-05 11:06+0900\n"
+"PO-Revision-Date: 2023-06-05 11:24+0900\n"
 "Last-Translator: Kenta Aratani <kentaaratani@coinez.jp>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
 "Language: ja\n"
@@ -4385,13 +4385,13 @@ msgstr ""
 
 #: src/ownership/moves-function-calls.md:1
 msgid "# Moves in Function Calls"
-msgstr ""
+msgstr "# 関数呼び出しにおけるムーブ"
 
 #: src/ownership/moves-function-calls.md:3
 msgid ""
 "When you pass a value to a function, the value is assigned to the function\n"
 "parameter. This transfers ownership:"
-msgstr ""
+msgstr "関数に値を渡すと、その値は関数のパラメータに割り当てられ、所有権が移動します。"
 
 #: src/ownership/moves-function-calls.md:6
 msgid ""
@@ -4419,6 +4419,14 @@ msgid ""
 "* Rust makes it harder than C++ to inadvertently create copies by making move semantics the "
 "default, and by forcing programmers to make clones explicit."
 msgstr ""
+"* `say_hello`への最初の呼び出しで`main`は`name`の所有権を放棄します。その後、`main`内では`name`を使"
+"用する事はできません。\n"
+"* `name`に割り当てられたヒープメモリは、`say_hello`関数の終わりに解放されます。\n"
+"* `name`を参照(`&name`)として`say_hello`に渡し、`say_hello`が参照をパラメータとして受け取れる場合、"
+"`main`は所有権を保持できます。\n"
+"* もしくは、最初の呼び出しで`name.clone()`のクローンを渡す事もできます。\n"
+"* Rustは、デフォルトでムーブセマンティクスを採用する事で、明示的なクローンの作成を強制し、C++よりも"
+"誤ってコピーを作成してしまう事をより難しくしています。"
 
 #: src/ownership/copy-clone.md:1
 msgid "# Copying and Cloning"
