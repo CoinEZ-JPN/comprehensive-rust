@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Comprehensive Rust 🦀\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-06-05 11:24+0900\n"
+"PO-Revision-Date: 2023-06-05 13:17+0900\n"
 "Last-Translator: Kenta Aratani <kentaaratani@coinez.jp>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
 "Language: ja\n"
@@ -4430,11 +4430,13 @@ msgstr ""
 
 #: src/ownership/copy-clone.md:1
 msgid "# Copying and Cloning"
-msgstr ""
+msgstr "# コピーとクローン"
 
 #: src/ownership/copy-clone.md:3
 msgid "While move semantics are the default, certain types are copied by default:"
 msgstr ""
+"基本的にはムーブセマンティクスがデフォルトですが、特定の型ではデフォルトでコピーが採用されていま"
+"す："
 
 #: src/ownership/copy-clone.md:5
 msgid ""
@@ -4450,11 +4452,11 @@ msgstr ""
 
 #: src/ownership/copy-clone.md:14
 msgid "These types implement the `Copy` trait."
-msgstr ""
+msgstr "このような型は`Copy`トレイトを実装しています。"
 
 #: src/ownership/copy-clone.md:16
 msgid "You can opt-in your own types to use copy semantics:"
-msgstr ""
+msgstr "独自の型でも、コピーセマンティクスの使用をオプトインできます："
 
 #: src/ownership/copy-clone.md:18
 msgid ""
@@ -4476,10 +4478,12 @@ msgid ""
 "* After the assignment, both `p1` and `p2` own their own data.\n"
 "* We can also use `p1.clone()` to explicitly copy the data."
 msgstr ""
+"* 代入後、`p1`と`p2`はそれぞれ独自のデータを所有します。\n"
+"* 明示的にデータのコピーを作成したい場合、`p1.clone()`も使えます。"
 
 #: src/ownership/copy-clone.md:35
 msgid "Copying and cloning are not the same thing:"
-msgstr ""
+msgstr "コピーとクローンは同じものではありません："
 
 #: src/ownership/copy-clone.md:37
 msgid ""
@@ -4489,10 +4493,14 @@ msgid ""
 "`Clone` trait.\n"
 "* Copying does not work on types that implement the `Drop` trait."
 msgstr ""
+"* コピーはメモリ領域のビット単位のコピーの事を指し、任意のオブジェクトには適用できません。\n"
+"* コピーには（C++のコピーコンストラクタのような）カスタムロジックがありません。\n"
+"* クローンはより広範な操作であり、`Clone`トレイトを実装する事でカスタム動作も可能です。\n"
+"* コピーは`Drop`トレイトを実装する型には適用できません。"
 
 #: src/ownership/copy-clone.md:42 src/ownership/lifetimes-function-calls.md:29
 msgid "In the above example, try the following:"
-msgstr ""
+msgstr "上記の例で、以下を試してみてください："
 
 #: src/ownership/copy-clone.md:44
 msgid ""
@@ -4502,6 +4510,10 @@ msgid ""
 "`p1`.\n"
 "* Show that it works if you clone `p1` instead."
 msgstr ""
+"* `struct Point`に`String`フィールドを追加してください。`String`は`Copy`トレイトを実装していないた"
+"め、コンパイルできません。\n"
+"* `derive`属性から`Copy`を削除してください。`p1`の`println!`でコンパイルエラーが発生します。\n"
+"* `p1`をクローンすれば動作する事を確認してください。"
 
 #: src/ownership/copy-clone.md:48
 msgid ""
@@ -4510,6 +4522,8 @@ msgid ""
 "at compile time. In this case the default implementations of `Copy` and `Clone` traits are "
 "generated."
 msgstr ""
+"`derive`について質問があった場合、コンパイル時にコードを生成する方法の一つである事を説明するだけで"
+"十分です。上記の場合、`Copy`トレイトと`Clone`トレイトのデフォルトの実装が生成されます。"
 
 #: src/ownership/borrowing.md:1
 msgid "# Borrowing"
