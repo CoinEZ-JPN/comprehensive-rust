@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Comprehensive Rust 🦀\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-06-05 13:17+0900\n"
+"PO-Revision-Date: 2023-06-05 13:47+0900\n"
 "Last-Translator: Kenta Aratani <kentaaratani@coinez.jp>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
 "Language: ja\n"
@@ -4527,13 +4527,13 @@ msgstr ""
 
 #: src/ownership/borrowing.md:1
 msgid "# Borrowing"
-msgstr ""
+msgstr "# 借用"
 
 #: src/ownership/borrowing.md:3
 msgid ""
 "Instead of transferring ownership when calling a function, you can let a\n"
 "function _borrow_ the value:"
-msgstr ""
+msgstr "関数を呼び出す際に所有権を移動するのではなく、関数に値を「借用」させる事ができます："
 
 #: src/ownership/borrowing.md:6
 msgid ""
@@ -4559,10 +4559,12 @@ msgid ""
 "* The `add` function _borrows_ two points and returns a new point.\n"
 "* The caller retains ownership of the inputs."
 msgstr ""
+"* `add`関数は2つのポイントを「借用」し、新しいポイントを返します。\n"
+"* 呼び出し元は引数の所有権を保持します。"
 
 #: src/ownership/borrowing.md:27
 msgid "Notes on stack returns:"
-msgstr ""
+msgstr "スタック上での戻り値に関する注意点:"
 
 #: src/ownership/borrowing.md:28
 msgid ""
@@ -4594,20 +4596,48 @@ msgid ""
 "have side effects. In Rust, this is not an issue at all. If RVO did not happen, Rust will always "
 "performs a simple and efficient `memcpy` copy."
 msgstr ""
+"* コンパイラはコピー操作を削除できるため、`add`関数の戻り値のコストが低い事を証明できます。上記の"
+"コードをスタックのアドレスが表示されるように変更し、[Playground]で実行してください。”DEBUG”の最適化"
+"レベルではアドレスが変わりますが、”RELEASE”に変更するとアドレスは同一のはずです：\n"
+"\n"
+"  ```rust,editable\n"
+"  #[derive(Debug)]\n"
+"  struct Point(i32, i32);\n"
+"\n"
+"  fn add(p1: &Point, p2: &Point) -> Point {\n"
+"      let p = Point(p1.0 + p2.0, p1.1 + p2.1);\n"
+"      println!(“&p.0: {:p}”, &p.0);\n"
+"      p\n"
+"  }\n"
+"\n"
+"  fn main() {\n"
+"      let p1 = Point(3, 4);\n"
+"      let p2 = Point(10, 20);\n"
+"      let p3 = add(&p1, &p2);\n"
+"      println!(“&p3.0: {:p}”, &p3.0);\n"
+"      println!(“{p1:?} + {p2:?} = {p3:?}”);\n"
+"  }\n"
+"  ```\n"
+"* Rustのコンパイラは戻り値最適化（Return Value Optimization, RVO）を行う事ができます。\n"
+"* C++では、コンストラクタに副作用がある可能性があるため、コピーエリジョン（Copy Elision）が言語仕様"
+"で定義される必要があります。しかし、Rustではこのような問題は発生しません。もしRVOが行われなかった場"
+"合、Rustは常にシンプルで効率的な`memcpy`コピーを行います。"
 
 #: src/ownership/shared-unique-borrows.md:1
 msgid "# Shared and Unique Borrows"
-msgstr ""
+msgstr "# 共有参照と独占参照"
 
 #: src/ownership/shared-unique-borrows.md:3
 msgid "Rust puts constraints on the ways you can borrow values:"
-msgstr ""
+msgstr "Rustは値を借用する方法に制約を設けています："
 
 #: src/ownership/shared-unique-borrows.md:5
 msgid ""
 "* You can have one or more `&T` values at any given time, _or_\n"
 "* You can have exactly one `&mut T` value."
 msgstr ""
+"* 一度に複数の`&T`値を持つ事が可能です。または、\n"
+"* 一つの`&mut T`値を持つ事が可能です。"
 
 #: src/ownership/shared-unique-borrows.md:8
 msgid ""
@@ -4637,6 +4667,11 @@ msgid ""
 "borrow of `a` through `c`. This is a feature of the borrow checker called \"non-lexical "
 "lifetimes\"."
 msgstr ""
+"* 上記のコードはコンパイルされません。可変である`c`と不変である`b`が同時に`c`から借用されているから"
+"です。\n"
+"* コードをコンパイル可能にするために、`c`を導入するスコープの前に`b`の`println!`文を移動します。\n"
+"* この変更後、コンパイラは`b`が`c`を介した新しい可変借用の前にしか使用されない事に気づきます。これ"
+"は、借用チェッカーの「非レキシカルライフタイム」と呼ばれる機能です。"
 
 #: src/ownership/lifetimes.md:1
 msgid "# Lifetimes"
